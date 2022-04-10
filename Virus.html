@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        align-items: center;
+    }
+
+    #popupBox {
+        width: 20em;
+        /*height: 10em;*/
+        background-color: #ddd;
+        overflow: auto;
+        padding: 0.0em;
+        border-style: outset;
+        border-width: 3px;
+        position: absolute;
+        display: none;
+    }
+
+    #alertSymbol {
+        display: inline-block;
+        width: 25%;
+    }
+
+    #alertSymbolImage {
+        display: inline-block;
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+
+    #alertTitle {
+        display: inline;
+        font-family: "PixelVJVeranda", Tahoma;
+    }
+
+    #alertMessage {
+        display: inline;
+    }
+
+    #alertMessageText {
+        display: inline-block;
+        width: 70%;
+        font-family: "PixelVJVeranda", Tahoma;
+    }
+
+    #messageContent {
+        background-color: #ddd;
+    }
+
+    #exitWindow {
+        display: inline;
+        float: right;
+    }
+
+    #closeButtonContainer {
+        float: right;
+    }
+
+    #closeButton {
+        margin: 0.1em;
+        font-family: "PixelVJVeranda", Tahoma;
+        font-size: 1em;
+        border-style: outset;
+    }
+
+    #exitWindowButton {
+        padding: 0em 0.2em;
+    }
+
+    #headerBar {
+        padding: 0.2em;
+        background-color: #0934C1;
+        color: #fff;
+    }
+</style>
+
+<body>
+    <div id="popupBox">
+        <div id="headerBar">
+
+            <div id="alertTitle"> Virus Detected </div>
+            <div id="exitWindow">
+                <button id="exitWindowButton" onclick="run()">✖</button>
+            </div>
+        </div>
+
+        <div id="messageContent">
+            <div id="alertSymbol">
+                <img id="alertSymbolImage" src="https://cdn2.scratch.mit.edu/get_image/user/2379494_90x90.png">
+            </div>
+            <div id="alertMessage">
+                <p id="alertMessageText">press ok to run antivirus!</p>
+            </div>
+            <div id="closeButtonContainer">
+                <button id="closeButton" onclick="run()"> Ok </button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    let popupbox = document.getElementById('popupBox');
+    let body = document.getElementsByTagName("body");
+
+    function roll() {
+        popupbox.style.display = 'block';
+    }
+    setTimeout(roll, 1000);
+
+
+
+
+    // "virus1"
+
+
+    // function run() {
+    //     function confirms() {
+    //         con = confirm("are you really want to run antivirus?");
+    //         console.log(con);
+    //         if (con ==  true) {
+    //           function myfunction(){popupbox.style.display = 'block'}
+    //            setTimeout(myfunction, 1000); 
+    //         }
+    //         else {
+    //            function myfunction(){popupbox.style.display = 'block'}
+
+    //            setTimeout(myfunction, 1000); 
+    //         }
+    //     }
+    //     setTimeout(confirms, 1000);
+    //     return popupbox.style.display = 'none';
+    // }
+
+
+
+    // "virus2"
+    var i = 100;
+        function run() {
+            $("#popupBox").clone().css("margin-left","100px").appendTo("body");
+            
+        }
+
+
+</script>
+
+</html>
