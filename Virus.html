@@ -145,9 +145,10 @@
 
 
     // "virus2"
-    var i = 100;
+    var i = 40;
         function run() {
-            $("#popupBox").clone().css("margin-left","100px").appendTo("body");
+            i= i + 40;
+            $("#popupBox").clone().css({"margin-left":`${i}px`,"margin-top":`${i}px`}).appendTo("body");
             
         }
 
